@@ -1,0 +1,120 @@
+1, Первый Бит, https://www.1c-bitrix.ru/partners/27270.php, https://studiobit.ru/
+2, Pride Web Development, https://www.1c-bitrix.ru/partners/13491.php, http://pwd.ru/
+3, Факт, https://www.1c-bitrix.ru/partners/378061.php, https://fact.digital/
+4, ITConstruct, https://www.1c-bitrix.ru/partners/29541.php, https://itconstruct.ru
+5, АйТи-Солюшн, https://www.1c-bitrix.ru/partners/1550629.php, http://it-solution.ru
+6, Эм Си Арт, https://www.1c-bitrix.ru/partners/150379.php, http://www.mcart.ru
+7, RDN Group, https://www.1c-bitrix.ru/partners/6303859.php, https://rdn-grp.ru/
+8, Информатика и Сервис, https://www.1c-bitrix.ru/partners/524714.php, Unknown Address
+9, Цифровой Элемент, https://www.1c-bitrix.ru/partners/550325.php, http://d-element.ru/?utm_source=bitrix_partners
+10, INTERVOLGA, https://www.1c-bitrix.ru/partners/150475.php, https://www.intervolga.ru
+11, КОРУС Консалтинг, https://www.1c-bitrix.ru/partners/1154960.php, https://korusconsulting.ru/
+12, IPG, https://www.1c-bitrix.ru/partners/102693.php, http://ipgpromo.ru
+13, Notamedia, https://www.1c-bitrix.ru/partners/60880.php, https://nota.media/
+14, Улей, https://www.1c-bitrix.ru/partners/317080.php, http://wehive.ru
+15, QSOFT, https://www.1c-bitrix.ru/partners/900.php, http://www.qsoft.ru
+16, DMC.ru, https://www.1c-bitrix.ru/partners/6626125.php, http://www.dmc.ru
+1, Первый Бит, https://www.1c-bitrix.ru/partners/27270.php, https://studiobit.ru/
+2, Pride Web Development, https://www.1c-bitrix.ru/partners/13491.php, http://pwd.ru/
+3, Факт, https://www.1c-bitrix.ru/partners/378061.php, https://fact.digital/
+4, ITConstruct, https://www.1c-bitrix.ru/partners/29541.php, https://itconstruct.ru
+5, АйТи-Солюшн, https://www.1c-bitrix.ru/partners/1550629.php, http://it-solution.ru
+6, Эм Си Арт, https://www.1c-bitrix.ru/partners/150379.php, http://www.mcart.ru
+7, RDN Group, https://www.1c-bitrix.ru/partners/6303859.php, https://rdn-grp.ru/
+8, Информатика и Сервис, https://www.1c-bitrix.ru/partners/524714.php, http://www.infoservice.ru/
+9, Цифровой Элемент, https://www.1c-bitrix.ru/partners/550325.php, http://d-element.ru/?utm_source=bitrix_partners
+10, INTERVOLGA, https://www.1c-bitrix.ru/partners/150475.php, https://www.intervolga.ru
+11, КОРУС Консалтинг, https://www.1c-bitrix.ru/partners/1154960.php, https://korusconsulting.ru/
+12, IPG, https://www.1c-bitrix.ru/partners/102693.php, http://ipgpromo.ru
+13, Notamedia, https://www.1c-bitrix.ru/partners/60880.php, https://nota.media/
+14, Улей, https://www.1c-bitrix.ru/partners/317080.php, http://wehive.ru
+15, QSOFT, https://www.1c-bitrix.ru/partners/900.php, http://www.qsoft.ru
+16, DMC.ru, https://www.1c-bitrix.ru/partners/6626125.php, http://www.dmc.ru
+17, Fusion, https://www.1c-bitrix.ru/partners/67737.php, https://efusion.ru
+18, 1С-Рарус, https://www.1c-bitrix.ru/partners/288584.php, http://rarus-crimea.ru/web/
+19, Айтекс, https://www.1c-bitrix.ru/partners/264980.php, https://web.itex.ru
+20, БизнесПрофи, https://www.1c-bitrix.ru/partners/15604.php, https://bizprofi.ru/integrator-bitriks24/
+21, Инсайд, https://www.1c-bitrix.ru/partners/15609.php, http://www.inside.ru
+22, Цитрус, https://www.1c-bitrix.ru/partners/69904.php, https://citrus-soft.ru/
+23, ПродвигаеФФ.ру, https://www.1c-bitrix.ru/partners/265637.php, http://prodvigaeff.ru
+24, ПУСК, https://www.1c-bitrix.ru/partners/1235692.php, https://i-pusk.ru/?utm_source=partner
+1, Первый Бит, https://www.1c-bitrix.ru/partners/27270.php, https://studiobit.ru/
+25, СофтБаланс, https://www.1c-bitrix.ru/partners/133968.php, https://sb-oir.ru/
+2, Pride Web Development, https://www.1c-bitrix.ru/partners/13491.php, http://pwd.ru/
+26, MWI, https://www.1c-bitrix.ru/partners/1020302.php, http://mwi.me
+3, Факт, https://www.1c-bitrix.ru/partners/378061.php, https://fact.digital/
+4, ITConstruct, https://www.1c-bitrix.ru/partners/29541.php, https://itconstruct.ru
+27,  Группа Компаний Навигатор, https://www.1c-bitrix.ru/partners/44401.php, http://web.nav-it.ru
+5, АйТи-Солюшн, https://www.1c-bitrix.ru/partners/1550629.php, http://it-solution.ru
+28, Софтлайн, https://www.1c-bitrix.ru/partners/301285.php, http://softline.ru
+29, Инфо-Эксперт, https://www.1c-bitrix.ru/partners/2509.php, https://www.info-expert.ru
+6, Эм Си Арт, https://www.1c-bitrix.ru/partners/150379.php, http://www.mcart.ru
+30, PINALL, https://www.1c-bitrix.ru/partners/635428.php, http://www.pinall.ru
+7, RDN Group, https://www.1c-bitrix.ru/partners/6303859.php, https://rdn-grp.ru/
+31, ООО «Софт-Мажор», https://www.1c-bitrix.ru/partners/175629.php, https://softmajor.ru
+8, Информатика и Сервис, https://www.1c-bitrix.ru/partners/524714.php, http://www.infoservice.ru/
+9, Цифровой Элемент, https://www.1c-bitrix.ru/partners/550325.php, http://d-element.ru/?utm_source=bitrix_partners
+32, INTEC, https://www.1c-bitrix.ru/partners/193047.php, http://www.intecweb.ru
+10, INTERVOLGA, https://www.1c-bitrix.ru/partners/150475.php, https://www.intervolga.ru
+33, Консалт-Инфо, https://www.1c-bitrix.ru/partners/10650.php, http://www.consult-info.ru
+11, КОРУС Консалтинг, https://www.1c-bitrix.ru/partners/1154960.php, https://korusconsulting.ru/
+12, IPG, https://www.1c-bitrix.ru/partners/102693.php, http://ipgpromo.ru
+34, VediTa, https://www.1c-bitrix.ru/partners/212563.php, http://www.vedita.ru
+13, Notamedia, https://www.1c-bitrix.ru/partners/60880.php, https://nota.media/
+35, informUnity, https://www.1c-bitrix.ru/partners/293065.php, http://informunity.ru/
+14, Улей, https://www.1c-bitrix.ru/partners/317080.php, http://wehive.ru
+36, Логема, https://www.1c-bitrix.ru/partners/6760301.php, https://logema.org/?utm_source=bitrix
+37, X3Group, https://www.1c-bitrix.ru/partners/13083.php, http://www.x3group.ru
+15, QSOFT, https://www.1c-bitrix.ru/partners/900.php, http://www.qsoft.ru
+16, DMC.ru, https://www.1c-bitrix.ru/partners/6626125.php, http://www.dmc.ru
+38, Сотбит, https://www.1c-bitrix.ru/partners/333943.php, https://www.sotbit.ru
+39, RASA, https://www.1c-bitrix.ru/partners/1061157.php, http://rasa.pro
+40, Ёлва, https://www.1c-bitrix.ru/partners/15441616.php, https://yolva-it.ru/
+17, Fusion, https://www.1c-bitrix.ru/partners/67737.php, https://efusion.ru
+41, Вебпрактик, https://www.1c-bitrix.ru/partners/151690.php, http://webpractik.ru
+18, 1С-Рарус, https://www.1c-bitrix.ru/partners/288584.php, http://rarus-crimea.ru/web/
+19, Айтекс, https://www.1c-bitrix.ru/partners/264980.php, https://web.itex.ru
+42, Webest, https://www.1c-bitrix.ru/partners/1420148.php, https://webest.ru/
+43, Вебформат, https://www.1c-bitrix.ru/partners/365335.php, https://www.webformat.ru/
+20, БизнесПрофи, https://www.1c-bitrix.ru/partners/15604.php, https://bizprofi.ru/integrator-bitriks24/
+44, НОРБИТ, https://www.1c-bitrix.ru/partners/7902267.php, https://www.norbit.ru/
+21, Инсайд, https://www.1c-bitrix.ru/partners/15609.php, http://www.inside.ru
+22, Цитрус, https://www.1c-bitrix.ru/partners/69904.php, https://citrus-soft.ru/
+45, Веб-Центр, https://www.1c-bitrix.ru/partners/312587.php, https://web-c.ru/
+46, Progressive Media, https://www.1c-bitrix.ru/partners/32329.php, http://progressivemedia.ru
+23, ПродвигаеФФ.ру, https://www.1c-bitrix.ru/partners/265637.php, http://prodvigaeff.ru
+47, ARTW, https://www.1c-bitrix.ru/partners/220511.php, http://artw.ru/
+24, ПУСК, https://www.1c-bitrix.ru/partners/1235692.php, https://i-pusk.ru/?utm_source=partner
+25, СофтБаланс, https://www.1c-bitrix.ru/partners/133968.php, https://sb-oir.ru/
+48, ITECH, https://www.1c-bitrix.ru/partners/72616.php, http://www.itech-group.ru
+26, MWI, https://www.1c-bitrix.ru/partners/1020302.php, http://mwi.me
+49, iTrack, https://www.1c-bitrix.ru/partners/30108.php, https://itrack.ru/
+27,  Группа Компаний Навигатор, https://www.1c-bitrix.ru/partners/44401.php, http://web.nav-it.ru
+50, KISLOROD, https://www.1c-bitrix.ru/partners/354513.php, https://o2k.ru/
+28, Софтлайн, https://www.1c-bitrix.ru/partners/301285.php, http://softline.ru
+51, 1С-Рарус, https://www.1c-bitrix.ru/partners/54112.php, http://rarus.ru/web/
+52, Hopper IT, https://www.1c-bitrix.ru/partners/424052.php, https://hopper-it.ru/
+29, Инфо-Эксперт, https://www.1c-bitrix.ru/partners/2509.php, https://www.info-expert.ru
+53, Augment, https://www.1c-bitrix.ru/partners/18317814.php, http://augment-tech.ru
+54, ADV, https://www.1c-bitrix.ru/partners/44269.php, http://www.adv.ru
+30, PINALL, https://www.1c-bitrix.ru/partners/635428.php, http://www.pinall.ru
+31, ООО «Софт-Мажор», https://www.1c-bitrix.ru/partners/175629.php, https://softmajor.ru
+55, Симай, https://www.1c-bitrix.ru/partners/8476.php, http://simai.ru/
+32, INTEC, https://www.1c-bitrix.ru/partners/193047.php, http://www.intecweb.ru
+56, Digital Web, https://www.1c-bitrix.ru/partners/938286.php, https://dw24.su/bx/
+57, КИТ МЕДИА, https://www.1c-bitrix.ru/partners/211275.php, http://www.kit-media.com
+33, Консалт-Инфо, https://www.1c-bitrix.ru/partners/10650.php, http://www.consult-info.ru
+58, Крайт, https://www.1c-bitrix.ru/partners/712923.php, https://krayt.ru/
+59, ARTGK., https://www.1c-bitrix.ru/partners/677744.php, http://www.artgk.ru
+34, VediTa, https://www.1c-bitrix.ru/partners/212563.php, http://www.vedita.ru
+60, WEBROVER, https://www.1c-bitrix.ru/partners/80017.php, http://webrover.ru
+35, informUnity, https://www.1c-bitrix.ru/partners/293065.php, http://informunity.ru/
+61, Digital Markets, https://www.1c-bitrix.ru/partners/9460597.php, https://www.dgtl.market 
+36, Логема, https://www.1c-bitrix.ru/partners/6760301.php, https://logema.org/?utm_source=bitrix
+37, X3Group, https://www.1c-bitrix.ru/partners/13083.php, http://www.x3group.ru
+62, CSN, https://www.1c-bitrix.ru/partners/356540.php, http://www.csn.ru
+38, Сотбит, https://www.1c-bitrix.ru/partners/333943.php, https://www.sotbit.ru
+63, Luxar Group, https://www.1c-bitrix.ru/partners/445842.php, https://luxar.group/
+39, RASA, https://www.1c-bitrix.ru/partners/1061157.php, http://rasa.pro
+64, Платформа, https://www.1c-bitrix.ru/partners/636421.php, https://platforma.bz/
+40, Ёлва, https://www.1c-bitrix.ru/partners/15441616.php, https://yolva-it.ru/
