@@ -77,31 +77,33 @@ class ProjectsParser
 
     public function getDocument($url)
     {
-        try {
-            $this->log("Fetching document from URL: {$url}");
+        while (true) {
+            try {
+                $this->log("Fetching document from URL: {$url}");
 
-            // Use curl to get the HTTP status code
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_NOBODY, true);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_HEADER, true);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-            curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-            curl_exec($ch);
+                // Use curl to get the HTTP status code
+                $ch = curl_init($url);
+                curl_setopt($ch, CURLOPT_NOBODY, true);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_HEADER, true);
+                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+                curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+                curl_exec($ch);
 
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            curl_close($ch);
+                $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                curl_close($ch);
 
-            if ($httpCode == 404) {
-                $this->log("404 Not Found at URL: {$url}");
-                return null; // Пропускаем страницу, если она не найдена
+                if ($httpCode === 404) {
+                    $this->log("404 Not Found at URL: {$url}");
+                    return null; // Пропускаем страницу, если она не найдена
+                }
+
+                $dom = new Document($url, true);
+                return $dom;
+            } catch (\Throwable $e) {
+                $this->log("Failed to fetch document at URL: {$url} - Error: " . $e->getMessage());
+                sleep(30); // Пропускаем в случае ошибки
             }
-
-            $dom = new Document($url, true);
-            return $dom;
-        } catch (\Throwable $e) {
-            $this->log("Failed to fetch document at URL: {$url} - Error: " . $e->getMessage());
-            return null; // Пропускаем в случае ошибки
         }
     }
 
