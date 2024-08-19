@@ -1,7 +1,17 @@
 <?php
 
+include_once $_SERVER["DOCUMENT_ROOT"] . "/../vendor/autoload.php";
+
 use Framework\Parser;
 use Framework\ProjectsParser;
+use Framework\CMain;
+use Framework\CDatabase;
+use Framework\CApi;
+use Framework\CUser;
+use Framework\Models\PartnerModel;
+use Framework\Validators\Validator;
+use Framework\Validators\UserValidator;
+use Symfony\Component\VarDumper\VarDumper;
 
 ini_set('max_execution_time', '10000');
 set_time_limit(0);
@@ -17,3 +27,27 @@ $projectParser->parse();
 //$html = $parser->parsePartners($url);
 //print_r($html);
 //$parser->parsAllPartners();
+$DB = new CDatabase();
+// $file = fopen('partners_data.txt', 'r');
+
+// while (!feof($file)) {
+//     $line = fgets($file);
+//     if ($line === false) {
+//         continue;
+//     }
+//     $arr = explode(',', $line);
+//     array_shift($arr);
+//     $partnerData = [
+//         'name' => $arr[0],
+//         'detail_page' => $arr[1],
+//         'url' => $arr[2]
+//     ];
+
+//     $PARTNERMODEL = PartnerModel::create($partnerData);
+
+//     // $PARTNERMODEL->create($arr);
+// }
+
+// fclose($file);
+// $PARTNERMODEL = new PartnerModel();
+//$API = new CApi();

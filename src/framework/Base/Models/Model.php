@@ -3,9 +3,12 @@
 namespace Framework\Models;
 
 use Framework\CDatabase;
+use Framework\Traits\Singleton;
 
 abstract class Model
 {
+    use Singleton;
+
     protected array $data;
     protected static string $repository;
 
