@@ -39,7 +39,12 @@ class ProjectsParser
                 }
 
                 $id = $arr[0];
-                $link = $arr[2];
+                $link = trim($arr[2]);
+
+                if ((int)$id < 653 || (int)$id > 1074) {
+                    continue;
+                }
+
                 $this->log("Processing ID: $id with link: $link at line number: {$lineNumber}");
 
                 $dom = $this->getDocument($link);
@@ -56,12 +61,18 @@ class ProjectsParser
                 }
 
                 foreach ($projects as $project) {
-                    $link = $this->getUrl($project);
-                    $newDom = $this->getDocument($link);
+                    $url = $this->getUrl($project);
+                    if (empty($url)) {
+                        $this->log("Skipping project due to invalid URL at line number: {$lineNumber}");
+                        continue;
+                    }
+
+                    $newDom = $this->getDocument($url);
                     if ($newDom === null) {
                         $this->log("Skipping project due to failed document retrieval at line number: {$lineNumber}");
                         continue;
                     }
+
                     $content = $this->getInfo($newDom);
                     $data = $this->combineData($id, $content);
                     $this->insertToFile($data);
@@ -109,7 +120,22 @@ class ProjectsParser
 
     public function getUrl($project): string
     {
-        return $this->baseUrl . $project->getAttribute('href');
+        $href = $project->getAttribute('href');
+        if (empty($href)) {
+            $this->log("Project href is empty or not found.");
+            return "";
+        }
+
+        $url = $this->baseUrl . $href;
+
+        $pattern = '/^https:\/\/www\.1c-bitrix\.ru\/products\/cms\/projects\/\d+\/$/';
+
+        if (!preg_match($pattern, $url)) {
+            $this->log("Invalid URL: {$url}");
+            return ""; // Возвращаем пустую строку, если URL не соответствует шаблону
+        }
+
+        return $url;
     }
 
     public function getProjects($dom): array
@@ -119,9 +145,12 @@ class ProjectsParser
 
     public function getInfo($dom): string
     {
-        $link = $dom->find(".detail-page-list__item-record_value")[2]->text();
-        $redaction = $dom->find(".detail-page-list__item-record_value a")[0]->text();
-        $description = $dom->find(".detail-page-case")[0]->text();
+        $elements = $dom->find(".detail-page-list__item-record_value");
+
+        $link = isset($elements[3]) ? $elements[3]->first('a')->getAttribute('href') : 'N/A';
+        $redaction = isset($elements[2]) ? $elements[2]->text() : 'N/A';
+        $descriptionElements = $dom->find(".detail-page-case");
+        $description = isset($descriptionElements[0]) ? $descriptionElements[0]->text() : 'N/A';
         $description = preg_replace('/\s+/', ' ', $description);
 
         return "{$link}, {$redaction}, {$description}\n";

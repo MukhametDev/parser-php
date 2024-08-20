@@ -655,8 +655,8 @@
 655, Снайпер, https://www.1c-bitrix.ru/partners/214902.php, http://sniper-m.ru
 656, Группа Компаний Миллор, https://www.1c-bitrix.ru/partners/434169.php, http://www.gkmillor.ru
 657, IT Business Solutions, https://www.1c-bitrix.ru/partners/655312.php, http://www.itbsgroup.ru/
-658, Bustlers, интернет студия, https://www.1c-bitrix.ru/partners/1448158.php, https://bustlers.ru
-659, Приоритет, digital-агентство, https://www.1c-bitrix.ru/partners/261883.php, https://vprioritete.ru/
+658, Bustlers, https://www.1c-bitrix.ru/partners/1448158.php, https://bustlers.ru
+659, Приоритет, https://www.1c-bitrix.ru/partners/261883.php, https://vprioritete.ru/
 660, Southmedia, https://www.1c-bitrix.ru/partners/585936.php, http://southmedia.ru
 661, ROOTMEDIA, https://www.1c-bitrix.ru/partners/1186014.php, https://rootmedia.ru
 662, БизнесUP, https://www.1c-bitrix.ru/partners/1477782.php, https://biznesup.com
@@ -896,7 +896,7 @@
 896,  FERMA, https://www.1c-bitrix.ru/partners/804364.php, http://fermastudio.com/
 897, ДЕЛЬТАЛАБ, https://www.1c-bitrix.ru/partners/1016538.php, https://deltalab.ru
 898, Экспансия, https://www.1c-bitrix.ru/partners/6886385.php, https://ewp.ru/
-899, Андрей Проскуряков, Senior Web Developer, https://www.1c-bitrix.ru/partners/2999.php, https://www.dstudio.ru
+899, Андрей Проскуряков, https://www.1c-bitrix.ru/partners/2999.php, https://www.dstudio.ru
 900, Web-Progress, https://www.1c-bitrix.ru/partners/277794.php, https://web-pro-spb.ru/
 901, Webolution, https://www.1c-bitrix.ru/partners/504208.php, http://www.webolution.ru
 902, Kolibri Studio, https://www.1c-bitrix.ru/partners/560421.php, http://kolibri.studio/
@@ -906,7 +906,7 @@
 906, Азбука Сайтов, https://www.1c-bitrix.ru/partners/242060.php, http://abcsa.ru
 907, DIUS, https://www.1c-bitrix.ru/partners/541493.php, http://www.web-dius.ru
 908, ИРС, https://www.1c-bitrix.ru/partners/740919.php, http://ирсиб.рф/
-909, Светлая голова, веб-студия дизайна, https://www.1c-bitrix.ru/partners/1420866.php, https://creativeizh.ru/
+909, Светлая голова, https://www.1c-bitrix.ru/partners/1420866.php, https://creativeizh.ru/
 910, AdvertSolutions, https://www.1c-bitrix.ru/partners/1569437.php, http://www.advertsolutions.ru
 911, D-groups, https://www.1c-bitrix.ru/partners/5159041.php, https://d-groups.ru/
 912, МерлионТех, https://www.1c-bitrix.ru/partners/15992066.php, https://merliontech.ru
@@ -1063,7 +1063,7 @@
 1063, РегионПромо, https://www.1c-bitrix.ru/partners/4727085.php, http://regionpromo.ru
 1064, Kvantix, https://www.1c-bitrix.ru/partners/7346779.php, https://kvantix.ru/
 1065, DIMITRENKO, https://www.1c-bitrix.ru/partners/8495467.php, https://dimitrenko-studio.ru
-1066, Простые решения, ООО Медиаком, https://www.1c-bitrix.ru/partners/10991418.php, http://ima-pr.ru
+1066, Простые решения, https://www.1c-bitrix.ru/partners/10991418.php, http://ima-pr.ru
 1067, Line UP Back&FrontEnd Production, https://www.1c-bitrix.ru/partners/11879689.php, http://line-up.io/ru/
 1068, ИнфоДизайн, https://www.1c-bitrix.ru/partners/167435.php, http://infodesign.ru/
 1069, Бюро М204, https://www.1c-bitrix.ru/partners/175253.php, http://m204.ru

@@ -9,6 +9,7 @@ use Framework\CDatabase;
 use Framework\CApi;
 use Framework\CUser;
 use Framework\Models\PartnerModel;
+use Framework\Models\ProjectModel;
 use Framework\Validators\Validator;
 use Framework\Validators\UserValidator;
 use Symfony\Component\VarDumper\VarDumper;
@@ -22,13 +23,13 @@ include_once "./framework/framework.php";
 $url = "https://www.1c-bitrix.ru/partners/index_ajax.php";
 
 //$parser = new Parser();
-$projectParser = new ProjectsParser();
-$projectParser->parse();
+// $projectParser = new ProjectsParser();
+// $projectParser->parse();
 //$html = $parser->parsePartners($url);
 //print_r($html);
 //$parser->parsAllPartners();
 $DB = new CDatabase();
-// $file = fopen('partners_data.txt', 'r');
+// $file = fopen('recap_data.txt', 'r');
 
 // while (!feof($file)) {
 //     $line = fgets($file);
@@ -36,18 +37,33 @@ $DB = new CDatabase();
 //         continue;
 //     }
 //     $arr = explode(',', $line);
-//     array_shift($arr);
+//     // array_shift($arr);
 //     $partnerData = [
-//         'name' => $arr[0],
-//         'detail_page' => $arr[1],
-//         'url' => $arr[2]
+//         'partner_id' => $arr[0],
+//         'project_url' => $arr[1],
+//         'product_version' => $arr[2],
+//         'description' => $arr[3]
 //     ];
 
-//     $PARTNERMODEL = PartnerModel::create($partnerData);
+//     $PARTNERMODEL = ProjectModel::create($partnerData);
 
 //     // $PARTNERMODEL->create($arr);
 // }
 
 // fclose($file);
+
+$file = fopen('partners.txt', 'r');
+$filewriter = fopen('newdata.txt', 'w');
+
+while (!feof($file)) {
+    $line = fgets($file);
+    if ($line === false) {
+        continue;
+    }
+
+    $arr = explode(':', $line);
+    dd($arr);
+}
+
 // $PARTNERMODEL = new PartnerModel();
 //$API = new CApi();
