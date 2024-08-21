@@ -17,10 +17,6 @@ class ComposerStaticInit7f6f36c833b31b0d16e312523652ac00
     );
 
     public static $prefixLengthsPsr4 = array (
-        'T' => 
-        array (
-            'Templates\\' => 10,
-        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -50,17 +46,9 @@ class ComposerStaticInit7f6f36c833b31b0d16e312523652ac00
             'Dotenv\\' => 7,
             'DiDom\\' => 6,
         ),
-        'C' => 
-        array (
-            'Components\\' => 11,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Templates\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/templates',
-        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -108,7 +96,7 @@ class ComposerStaticInit7f6f36c833b31b0d16e312523652ac00
         ),
         'Framework\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/framework/Base',
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Dotenv\\' => 
         array (
@@ -117,10 +105,6 @@ class ComposerStaticInit7f6f36c833b31b0d16e312523652ac00
         'DiDom\\' => 
         array (
             0 => __DIR__ . '/..' . '/imangazaliev/didom/src/DiDom',
-        ),
-        'Components\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/components',
         ),
     );
 

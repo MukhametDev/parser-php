@@ -1,9 +1,7 @@
 {
     "autoload": {
         "psr-4": {
-            "Framework\\": "../parser-php/src/framework/Base",
-            "Templates\\": "../parser-php/src/templates",
-            "Components\\": "../parser-php/src/components"
+            "Framework\\": "../parser-php/src/"
         }
     },
     "require": {
