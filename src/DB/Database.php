@@ -1,10 +1,11 @@
 <?php
 
-namespace Framework;
+namespace Framework\DB;
 
+use Framework\Config\Config;
 use Framework\Traits\Singleton;
 
-class CDatabase
+class Database
 {
     use Singleton;
 
@@ -68,5 +69,11 @@ class CDatabase
     public function close()
     {
         $this->connection = null;
+    }
+
+    public function fetchColumn($sql)
+    {
+        $stmt = $this->query($sql);
+        return $stmt->fetchColumn();
     }
 }

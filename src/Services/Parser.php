@@ -96,19 +96,10 @@ use DiDom\Exceptions\InvalidSelectorException;
 //}
 class Parser
 {
-    private $client;
-    private $db;
-
     public $filename = "links.txt";
     public $baseUrl = "https://www.1c-bitrix.ru/partners/";
     public $errorLogFile = "error_log.txt";
     public $id = 0;
-
-    public function __construct()
-    {
-        $this->client = new Client();
-        $this->db = CDatabase::getInstance();
-    }
 
     public function parsePartners(string $url)
     {
@@ -222,4 +213,3 @@ class Parser
         file_put_contents($this->errorLogFile, $message . PHP_EOL, FILE_APPEND);
     }
 }
-

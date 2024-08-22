@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:focus,
+a:active 
+{
+    color:inherit;
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+.url {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.card {
+    max-height: 300px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.text {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 7; 
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
+    color: #333;
+}
+p span{
+    color: #999;  
+}
+.name {
+    text-align: center;
+}
+.cards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    margin-bottom: 30px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    padding:10px;
+    color: #999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.back-button:hover a{
+    color: #333;
+    border-bottom: 1px solid #333;
+}
+
+.top-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding:10px;
+    border-radius: 10px;
+    background-color: #999; 
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: none;
+}

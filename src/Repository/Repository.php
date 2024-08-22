@@ -2,15 +2,15 @@
 
 namespace Framework\Repository;
 
-use Framework\CDatabase;
+use Framework\DB\Database;
 
 abstract class Repository
 {
     protected static string $table;
 
-    public static function getDatabase(): CDatabase
+    public static function getDatabase(): Database
     {
-        return CDatabase::getInstance();
+        return Database::getInstance();
     }
 
     public function findAll(): ?self
@@ -98,6 +98,22 @@ abstract class Repository
 
         $query .= implode(' AND ', $clauses);
         $data = self::getDatabase()->fetchAll($query, $params);
+        return $data;
+    }
+
+    public static function getData(int $limit, int $offset): array
+    {
+        $table = static::$table;
+        $sql = "SELECT * FROM {$table} LIMIT {$limit} OFFSET {$offset}";
+        $data = self::getDatabase()->fetchAll($sql);
+        return $data;
+    }
+
+    public static function getTotalCount(): int
+    {
+        $table = static::$table;
+        $sql = "SELECT COUNT(*) FROM {$table}";
+        $data = self::getDatabase()->fetchColumn($sql);
         return $data;
     }
 }

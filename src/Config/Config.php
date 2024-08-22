@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework;
+namespace Framework\Config;
 
 use Framework\Traits\Singleton;
 
@@ -17,7 +17,7 @@ class Config
 
     protected function init(): void
     {
-        $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . "/../../../");
+        $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . "/../../");
         $dotenv->load();
 
         $this->dbSettings = [

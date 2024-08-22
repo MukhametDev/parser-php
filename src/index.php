@@ -2,26 +2,34 @@
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/../vendor/autoload.php";
 
+
 use Framework\Parser;
 use Framework\ProjectsParser;
-use Framework\CMain;
-use Framework\CDatabase;
-use Framework\CApi;
-use Framework\CUser;
+use Framework\Controller\MainController;
 use Framework\Models\PartnerModel;
 use Framework\Models\ProjectModel;
-use Framework\Validators\Validator;
-use Framework\Validators\UserValidator;
-use Symfony\Component\VarDumper\VarDumper;
+use Framework\Services\Paginator;
+use Framework\Services\ProjectService;
 
 ini_set('max_execution_time', '10000');
 set_time_limit(0);
 ini_set('memory_limit', '4096M');
 ignore_user_abort(true);
-include_once "./framework/framework.php";
+
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$partnerId = isset($_GET['partner_id']) ? (int)$_GET['partner_id'] : 0;
 
 $url = "https://www.1c-bitrix.ru/partners/index_ajax.php";
 
+$projectService = new ProjectService();
+$paginator = new Paginator();
+$controller = new MainController($projectService, $paginator);
+
+if ($partnerId > 0) {
+    $controller->showProjects($partnerId, $page);
+} else {
+    $controller->showPartners($page);
+}
 //$parser = new Parser();
 // $projectParser = new ProjectsParser();
 // $projectParser->parse();

@@ -2,7 +2,7 @@
 
 namespace Framework\Models;
 
-use Framework\CDatabase;
+use Framework\Database;
 use Framework\Traits\Singleton;
 
 abstract class Model
@@ -70,5 +70,15 @@ abstract class Model
     public function search(array $conditions): array
     {
         return static::$repository::search($conditions);
+    }
+
+    public static function getData(int $limit, int $offset): array
+    {
+        return static::$repository::getData($limit, $offset);
+    }
+
+    public static function getTotalCount(): int
+    {
+        return static::$repository::getTotalCount();
     }
 }
