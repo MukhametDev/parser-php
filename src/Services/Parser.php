@@ -1,101 +1,21 @@
 <?php
 
-namespace Framework;
+namespace Framework\Services;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use DiDom\Document;
 use DiDom\Exceptions\InvalidSelectorException;
+use Framework\Traits\FileHandlerTrait;
+use Framework\Traits\IDGeneratorTrait;
+use Framework\Traits\LoggerTrait;
 
-//class Parser
-//{
-//    public $baseUrl = 'https://www.1c-bitrix.ru/partners/';
-//    public $filePath = 'partners_data.txt';
-//    public $logPath = 'logs.log';
-//
-//
-//    public function parsAllPartners()
-//    {
-//        $endpoint = 'index_ajax.php?PAGEN_1=';
-//        $pagenValue = 1;
-//
-//        while ($pagenValue <= 120) {
-//            try {
-//                $baseDocument = new Document($this->baseUrl . $endpoint . $pagenValue, true);
-//
-//                $this->parsPartnerBlock($baseDocument);
-//                $this->writeToFile($this->logPath, 'PAGEN=' . $pagenValue . "\n");
-//            } catch (\Throwable $e) {
-//                $this->writeToFile($this->logPath, $e->getMessage() . "\n");
-//                sleep(600);
-//                continue;
-//            }
-//            $pagenValue++;
-//        }
-//    }
-//
-//    public function parsPartnerBlock($baseDocument)
-//    {
-//        $endpoints = $baseDocument->find('.bx-ui-tile__main-link');
-//
-//        foreach ($endpoints as $endpoint) {
-//            try {
-//                $detailPage = $this->getDetailPage($endpoint);
-//
-//                $document = new Document($detailPage, true);
-//
-//                $name = $this->getPartnerName($document);
-//                $partnerAddress = $this->getPartnerAddress($document);
-//
-//                $content = "{$this->getNewId()}, {$name}, {$detailPage}, {$partnerAddress}\n";
-//                echo $content;
-//                $this->writeToFile($this->filePath, $content);
-//            } catch (\Throwable $e) {
-//                $this->writeToFile($this->logPath, 'Error in parsPartnerBlock: ' . $e->getMessage());
-//                sleep(60);
-//                continue;
-//            }
-//        }
-//    }
-//
-//    public function getDetailPage($partner)
-//    {
-//        return $this->baseUrl . ltrim($partner->getAttribute('href'), './');
-//    }
-//
-//    public function getPartnerName($document)
-//    {
-//        try {
-//            return $document->first('.partner-card-profile-header-title')->text();
-//        } catch (\Throwable $e) {
-//            $this->writeToFile($this->logPath, 'Error in getPartnerName: ' . $e->getMessage() . "\n");
-//            return 'Unknown Name';
-//        }
-//    }
-//
-//    public function getPartnerAddress($document)
-//    {
-//        try {
-//            return $document->first('.simple-link')->getAttribute('href');
-//        } catch (\Throwable $e) {
-//            $this->writeToFile($this->logPath, 'Error in getPartnerAddress: ' . $e->getMessage() . "\n");
-//            return 'Unknown Address';
-//        }
-//    }
-//
-//    public function writeToFile($filePath, $fileContent)
-//    {
-//        file_put_contents($filePath, $fileContent, FILE_APPEND);
-//    }
-//
-//    public function getNewId()
-//    {
-//        static $id = 1;
-//        return $id++;
-//    }
-//}
 class Parser
 {
+    use FileHandlerTrait;
+    use LoggerTrait;
+    use IDGeneratorTrait;
+
     public $filename = "links.txt";
     public $baseUrl = "https://www.1c-bitrix.ru/partners/";
     public $errorLogFile = "error_log.txt";
@@ -106,7 +26,7 @@ class Parser
         $count  = 120;
         $pageNumber = 1;
 
-        file_put_contents($this->filename, '');
+        $this->clearFile();
 
         while ($count > 0) {
             $fullUrl = $url . "?PAGEN_1=" . $pageNumber;
@@ -122,7 +42,7 @@ class Parser
 
                         // Запись в файл только если все данные валидны
                         if ($this->isValidData($content)) {
-                            $this->insertInFile($content);
+                            $this->insertToFile($content);
                         }
                     } catch (RequestException $e) {
                         $this->logError($e->getMessage());
@@ -165,16 +85,6 @@ class Parser
     protected function transformUrl($partner)
     {
         return $this->baseUrl . ltrim($partner->getAttribute('href'), './');
-    }
-
-    protected function generateId()
-    {
-        return $this->id++;
-    }
-
-    protected function insertInFile($content)
-    {
-        file_put_contents($this->filename, $content, FILE_APPEND);
     }
 
     protected function getInfo($dom, $url = null)

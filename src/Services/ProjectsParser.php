@@ -1,12 +1,19 @@
 <?php
 
-namespace Framework;
+namespace Framework\Services;
 
 use DiDom\Document;
 use Exception;
+use Framework\Traits\FileHandlerTrait;
+use Framework\Traits\IDGeneratorTrait;
+use Framework\Traits\LoggerTrait;
 
 class ProjectsParser
 {
+    use FileHandlerTrait;
+    use LoggerTrait;
+    use IDGeneratorTrait;
+
     public string $filename = 'detail_partner.txt';
     public string $baseUrl = 'https://www.1c-bitrix.ru';
     private int $requestInterval = 10;
@@ -28,13 +35,13 @@ class ProjectsParser
                 $lineNumber++;
 
                 if (empty(trim($line))) {
-                    $this->log("Empty line at line number: {$lineNumber}");
+                    $this->logError("Empty line at line number: {$lineNumber}");
                     continue;
                 }
 
                 $arr = explode(',', $line);
                 if (count($arr) < 3) {
-                    $this->log("Invalid line format at line number: {$lineNumber} - Content: {$line}");
+                    $this->logError("Invalid line format at line number: {$lineNumber} - Content: {$line}");
                     continue;
                 }
 
@@ -45,31 +52,31 @@ class ProjectsParser
                     continue;
                 }
 
-                $this->log("Processing ID: $id with link: $link at line number: {$lineNumber}");
+                $this->logError("Processing ID: $id with link: $link at line number: {$lineNumber}");
 
                 $dom = $this->getDocument($link);
                 if ($dom === null) {
-                    $this->log("Skipping ID: $id due to failed document retrieval at line number: {$lineNumber}");
+                    $this->logError("Skipping ID: $id due to failed document retrieval at line number: {$lineNumber}");
                     continue;
                 }
 
                 $projects = $this->getProjects($dom);
 
                 if (empty($projects)) {
-                    $this->log("No projects found for ID: $id with link: $link at line number: {$lineNumber}");
+                    $this->logError("No projects found for ID: $id with link: $link at line number: {$lineNumber}");
                     continue;
                 }
 
                 foreach ($projects as $project) {
                     $url = $this->getUrl($project);
                     if (empty($url)) {
-                        $this->log("Skipping project due to invalid URL at line number: {$lineNumber}");
+                        $this->logError("Skipping project due to invalid URL at line number: {$lineNumber}");
                         continue;
                     }
 
                     $newDom = $this->getDocument($url);
                     if ($newDom === null) {
-                        $this->log("Skipping project due to failed document retrieval at line number: {$lineNumber}");
+                        $this->logError("Skipping project due to failed document retrieval at line number: {$lineNumber}");
                         continue;
                     }
 
@@ -77,12 +84,10 @@ class ProjectsParser
                     $data = $this->combineData($id, $content);
                     $this->insertToFile($data);
                 }
-
-                // sleep($this->requestInterval); // Uncomment for production use
             }
             fclose($file);
         } catch (Exception $e) {
-            $this->log("Exception occurred: " . $e->getMessage());
+            $this->logError("Exception occurred: " . $e->getMessage());
         }
     }
 
@@ -90,7 +95,7 @@ class ProjectsParser
     {
         while (true) {
             try {
-                $this->log("Fetching document from URL: {$url}");
+                $this->logError("Fetching document from URL: {$url}");
 
                 // Use curl to get the HTTP status code
                 $ch = curl_init($url);
@@ -105,14 +110,14 @@ class ProjectsParser
                 curl_close($ch);
 
                 if ($httpCode === 404) {
-                    $this->log("404 Not Found at URL: {$url}");
+                    $this->logError("404 Not Found at URL: {$url}");
                     return null; // Пропускаем страницу, если она не найдена
                 }
 
                 $dom = new Document($url, true);
                 return $dom;
             } catch (\Throwable $e) {
-                $this->log("Failed to fetch document at URL: {$url} - Error: " . $e->getMessage());
+                $this->logError("Failed to fetch document at URL: {$url} - Error: " . $e->getMessage());
                 sleep(30); // Пропускаем в случае ошибки
             }
         }
@@ -122,7 +127,7 @@ class ProjectsParser
     {
         $href = $project->getAttribute('href');
         if (empty($href)) {
-            $this->log("Project href is empty or not found.");
+            $this->logError("Project href is empty or not found.");
             return "";
         }
 
@@ -131,7 +136,7 @@ class ProjectsParser
         $pattern = '/^https:\/\/www\.1c-bitrix\.ru\/products\/cms\/projects\/\d+\/$/';
 
         if (!preg_match($pattern, $url)) {
-            $this->log("Invalid URL: {$url}");
+            $this->logError("Invalid URL: {$url}");
             return ""; // Возвращаем пустую строку, если URL не соответствует шаблону
         }
 
@@ -156,27 +161,8 @@ class ProjectsParser
         return "{$link}, {$redaction}, {$description}\n";
     }
 
-    public function insertToFile(string $content): void
-    {
-        file_put_contents($this->filename, $content, FILE_APPEND);
-        $this->log("Data inserted to file: {$this->filename}");
-    }
-
-    public function clearFile(): void
-    {
-        file_put_contents($this->filename, '');
-        $this->log("File cleared: {$this->filename}");
-    }
-
     public function combineData(int $id, string $content): string
     {
         return "{$id}, {$content}";
-    }
-
-    private function log(string $message): void
-    {
-        $timestamp = date('Y-m-d H:i:s');
-        $logEntry = "[{$timestamp}] {$message}\n";
-        file_put_contents($this->logFilename, $logEntry, FILE_APPEND);
     }
 }

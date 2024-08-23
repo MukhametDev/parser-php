@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="wrapper">
+    <a href="/index.php?action=parsePartners" class="btn btn-primary">Распарсить партнеров</a>
         <div class="cards">
             <?php foreach ($partners as $partner) : ?>
                 <div class='card'>

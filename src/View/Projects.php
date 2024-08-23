@@ -10,6 +10,7 @@
 
 <body>
     <div class="wrapper">
+    <a href="/index.php?action=parseProjects" class="btn btn-secondary">Распарсить проекты</a>
         <div class="back-button">
             <a href='?page=<?php echo htmlspecialchars($page); ?>'>Вернуться к списку партнеров</a>
         </div>
@@ -33,6 +34,7 @@
                 <a class='url' href='?partner_id=<?php echo htmlspecialchars($partnerId); ?>&page=<?php echo $i; ?>'><?php echo $i; ?></a>
             <?php endfor; ?>
         </div>
+        <a class='top-button' href='#'>Наверх</a>
     </div>
 </body>
 <script type="module" src="./../js/app.js"></script>
